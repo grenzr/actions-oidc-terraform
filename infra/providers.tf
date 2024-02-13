@@ -10,7 +10,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "cd-teroidc-shared"
-    storage_account_name = "teroidc"
+    storage_account_name = "gnzteroidc"
     container_name       = "tfstate"
     key                  = "dev.teroidc.tfstate"
   }
