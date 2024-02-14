@@ -89,6 +89,7 @@ jobs:
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         ARM_USE_OIDC: true
         DESTROY: ${{ steps.destroy_arg.outputs.val }}
+        ARM_SKIP_PROVIDER_REGISTRATION: true
 
     - name: Create the plan summary
       uses: actions/github-script@v6
@@ -193,6 +194,7 @@ jobs:
         ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         ARM_USE_OIDC: true
+        ARM_SKIP_PROVIDER_REGISTRATION: true
     
     - name: Create the plan summary
       uses: actions/github-script@v6
